@@ -27,10 +27,10 @@ const Form = () => {
     if (user.user_name.trim() && user.user_email) {
       emailjs
         .sendForm(
-          "service_lucnvx4",
-          "template_3nc3vzv",
+          process.env.keyOne,
+          process.env.keyTwo,
           form.current,
-          "LbTbDkCWyV78gH55Y"
+          process.env.keyThree
         )
         .then(
           (result) => {
